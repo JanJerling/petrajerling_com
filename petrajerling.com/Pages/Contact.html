@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Petra Jerling - Music Therapy: Contact</title>
+<!--================== META  ===============================================================================================================!-->
+<meta name="description" content="Petra Jerling is a qualified Music Therapist practicing in the Lowveld, Mpumalanga, area. Her degrees in Music Education, Psychology and Music Therapy, along with her extensive experience in these fields, enables her to bring healing to those who are most in need of it. By harnessing the power of music, this sophisticated and nuanced therapy can change the lives of many." />
+<meta name="keywords" content="Music Therapy, music therapist, music, therapy, petra, jerling, musiekterapie, musiek, terapie, terapeet" />
+<meta http-equiv="author" content="Jan Jerling" />
+<meta http-equiv="content-language" content="en-ZA" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--================== LINKS  ===============================================================================================================!-->
+<link rel="shortcut icon" href="../Images/titleicon.ico">
+<link type="text/css" rel="stylesheet" href="../Stylesheets/style.css">
+</head>
+
+<body>
+
+<button id="openNav" onclick="sidenav_open()" title="menu"></button>
+
+<div class="sidenav" id="sidebar">
+	<button id="closeNav" onclick="sidenav_close()" title="menu"></button>
+	<button class="sidenav-btn" onclick="window.location.href='../index.php'">Home</button>
+	<button class="dropdown-btn">About</button>
+	<div class="dropdown-container">
+		<a class="droplist" href="About.html#musictherapy">Music Therapy</a>
+		<a class="droplist" href="About.html#petrajerling">Petra</a>
+		<a class="droplist" href="About.html#pubs">Publications</a>
+	</div>
+	<button class="dropdown-btn">Services</button>
+	<div class="dropdown-container">
+		<a class="droplist" href="Services.html#MI">M I</a>
+		<a class="droplist" href="Services.html#GIM">G I M</a>
+		<a class="droplist" href="Services.html#CreaMT">Creative Music Therapy</a>
+		<a class="droplist" href="Services.html#PosPsy">Positive Psychology</a>
+		<a class="droplist" href="Services.html#MARI">MARI</a>
+		<a class="droplist" href="Services.html#ComMT">Community Music Therapy</a>
+		<a class="droplist" href="Services.html#TB">Team Building</a>
+	</div>
+	<button id="contact-btn" class="sidenav-btn" onclick="window.location.href='Contact.html'">Contact</button>
+</div>
+
+<div class="main">
+
+	<h1 id="contactMe">Contact Me</h1>
+	
+	<div class="paraCon">
+		<p id="paraCon1">
+			Please feel free to contact me with any questions or queries.<br> I am always available to help.
+		</p>
+
+	</div>
+	
+	<div id="contactform">
+	
+	    <form action="../contactform.php" method="post">
+	        
+	        <div class="name"><input type="text" name="name" placeholder="Your name"></div>
+            <div class="email"><input type="text" name="email" placeholder="Your e-mail"></div>
+            <div class="subject"><input type="text" name="subject" placeholder="Subject"></div>
+
+            <div class="text"><textarea name="message" placeholder="Sing your song..."></textarea></div>
+
+            <button id="submit" type="submit" name="submit">Send</button>
+            
+	    </form>
+
+	</div>
+
+	<div id="number">call: +27 84 548 4202</div>
+
+
+
+</div>
+
+<!--================== SCRIPTS  ===============================================================================================================!-->
+
+<script type="text/javascript" src="../JavaScript/navbar.js"></script>
+<script type="text/javascript" src="../JavaScript/sideshow.js"></script>
+<script type="text/javascript" src="../JavaScript/sidehide.js"></script>
+<script type="text/javascript" src="../JavaScript/permanentshow.js"></script>
+
+</body>
+
+
+
+</html>

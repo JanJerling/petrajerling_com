@@ -1,0 +1,317 @@
+/* ==================================  Global Section ====================================*/
+    :root {
+        --MainBack: #ffffff;/*was #d3d5e8;*/
+        --SecondBack: #494a4d;/*was #01031c;*/
+        --HoverSelected: #eef4d7;/*#59594f;/*was #0a0e3d;*/
+    } 
+    
+    body {
+        margin: 0;
+        background-color: var(--MainBack);
+    }
+    
+	
+/*------------Main Section-------------*/
+    #main {
+        margin-left: 201px;/* to leave space for the SideNav*/
+        /*background-color: orange;*/
+    }
+
+    #mainimage {
+        display: block;
+		margin-top: 180px;
+        /*background-color: blue;*/
+    }
+	
+	.HomeImageDiv{
+		margin-left: auto;
+		margin-right: auto;	
+		border: none;		
+	}	
+	.HomeImage{
+		margin-left: auto;
+		margin-right: auto;	
+		border: none;	
+	}	
+	
+	
+/*------------SideNav Section-------------*/
+	#sidenav {
+		height: 100%;
+		width: 200px;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: var(--SecondBack);
+		overflow-x: hidden;
+		padding-top: 55px;	
+	}		
+	.sidenav-btn {	
+		margin-top: 50px;	
+		text-decoration: none;
+		font-size: 20px;
+		font-family: Arial;
+		font-weight: bold;
+		color: var(--MainBack);
+		display: block;
+		background: none;
+		text-align: center;
+		cursor: pointer;
+		outline: none;
+		position: relative;
+		top: 8%;
+		border: 5px double var(--SecondBack);
+		padding: 5px 5px 5px 5px;
+		margin-left: auto;
+		margin-right: auto;
+	}		
+	.sidenav-btn:hover {
+		border: 5px double var(--MainBack);
+		margin-left: auto;
+		margin-right: auto;
+		color: var(--SecondBack);
+		background-color: var(--HoverSelected);
+		padding: 5px 5px 5px 5px;
+	}
+	.dropdown-btn {	
+		margin-top: 50px;	
+		text-decoration: none;
+		font-size: 20px;
+		font-family: Arial;
+		font-weight: bold;
+		color: var(--MainBack);
+		display: block;
+		background: none;
+		text-align: center;
+		cursor: pointer;
+		outline: none;
+		position: relative;
+		top: 8%;
+		border: 5px double var(--SecondBack);
+		padding: 5px 5px 5px 5px;
+		margin-left: auto;
+		margin-right: auto;
+	}		
+	.dropdown-btn:hover {
+		border: 5px double var(--MainBack);
+		margin-left: auto;
+		margin-right: auto;
+		color: var(--SecondBack);
+		background-color: var(--HoverSelected);
+		padding: 5px 5px 5px 5px;
+	}	
+	.active {	/*button has been clicked*/
+		border: 5px double var(--MainBack);	
+		background-color: var(--HoverSelected);
+		color: var(--SecondBack);	
+	}	
+	.dropdown-container {
+		position: relative;
+		top: 10%;
+		display: none;
+		background-color: var(--MainBack);
+	}
+	.dropdown-container a.droplist{
+		margin: 0;
+		border: none;
+		color: var(--SecondBack);
+		text-decoration: none;
+		font-size: 14px;
+		font-family: Arial;
+		font-weight: bold;
+		display: block;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		background: none;
+		text-align: center;		
+	}
+	.dropdown-container a.droplist:hover{
+	    margin: 0;
+	    border: none;
+	    background: var(--HoverSelected);
+	    color: var(--SecondBack);
+	}		
+	
+/*------------Play Music Section-------------*/
+	#wrapper {
+	    display: block;
+		margin-top: 60px;
+		margin-left: 201px;
+		background-color: var(--MainBack);
+		border: none;
+	}
+	#pauseplay {
+		background-position: center;
+		background-color: var(--MainBack);
+		border: none;
+		opacity: 1.0;
+		transition: opacity 0.3s ease-in-out;
+		outline: none;	
+		width: 122px;
+		height: 35px;
+		background-image: url(../Images/homeaudiomed.png);
+		position: relative;
+		left: 65%;
+	}
+	#pauseplay:hover {
+		opacity: 0.7;
+		cursor: pointer;
+	}
+
+
+/* ==================================  Standard Screen ====================================*/
+/*Image*/
+	#Home{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 90%;
+		height:auto;
+	}
+	#HomeMed{
+		display: none;
+	}
+	#HomeLarge{
+		display: none;
+	}
+	#HomeImageSmall{
+		display: none;
+	}
+
+
+/* ==================================  tablets ====================================*/
+
+
+@media screen and (max-width: 900px) {
+
+	/*Image*/
+        #mainimage {
+	    	margin-top: 100px;
+        }	
+		#Home{
+			display: none;
+		}
+		#HomeMed{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 90%;
+			height:auto;
+		}
+		#HomeLarge{
+			display: none;
+		}
+		#HomeImageSmall{
+			display: none;
+		}
+	/*Music*/	
+		#pauseplay {
+		position: relative;
+		left: 40%;
+		}	
+
+}
+
+
+/* ================================ Smart phone ==================================*/
+
+@media screen and (max-width: 500px) {
+		
+	/*Display change: only use SideNav for phones*/	
+		#main { 
+			display: none;
+		}	
+		#sidenav {
+			width: 100%;
+			background-color: var(--MainBack);
+			padding-top: 0;
+		}
+		.sidenav-btn {	
+			margin-top: 25px;	
+			font-size: 18px;
+			color: var(--SecondBack);
+			border: 2px double var(--MainBack);
+			padding: 2px 2px 2px 2px;
+		    position: relative;
+		    top: 0%;
+		}	
+		.dropdown-btn {	
+			margin-top: 25px;	
+			font-size: 18px;
+			color: var(--SecondBack);
+			border: 2px double var(--MainBack);
+			padding: 2px 2px 2px 2px;
+		    position: relative;
+		    top: 0%;
+		}	
+		.dropdown-btn:hover {
+			border: 2px double var(--MainBack);
+			padding: 2px 2px 2px 2px;
+		}	
+		.active {	/*button has been clicked*/
+			border: 2px double var(--MainBack);
+		}	
+	    .dropdown-container {
+	    	background-color: var(--HoverSelected);
+		    position: relative;
+		    top: 1%;
+	    }
+	    .dropdown-container a.droplist:hover{
+	        background: var(--SecondBack);
+	        color: var(--MainBack);
+	    }		
+	/*Image*/
+		#Home{
+			display: none;
+		}
+		#HomeMed{
+			display: none;
+		}
+		#HomeLarge{
+			display: none;
+		}
+		#HomeImageSmall{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			max-width: 80%;
+			height:auto;
+		}
+		
+		#home-btn{
+		    display: none;
+		}
+
+}
+
+/* ==========================================================  big screen ========================================================*/
+
+
+@media screen and (min-width: 1800px) {
+	
+	/*Image*/
+		#Home{
+			display: none;
+		}
+		#HomeMed{
+			display: none;
+		}
+		#HomeLarge{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 80%;
+			height:auto;
+		}
+		#HomeImageSmall{
+			display: none;
+		}
+	/*Music*/	
+		#pauseplay {
+			position: relative;
+			left: 70%;
+		}
+	
+}
